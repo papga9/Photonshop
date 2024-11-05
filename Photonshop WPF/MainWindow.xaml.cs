@@ -34,12 +34,11 @@ namespace Photonshop_WPF
         public MainWindow()
         {
             InitializeComponent();
-            bm.BeginInit();
-            bm.UriSource = new Uri("C:\\Users\\pappg\\my stuff\\Code Repos\\Photonshop\\Photonshop WPF\\shrek.jpg");
-            bm.EndInit();
-            RefreshImage();
+           
+            pic = CvInvoke.Imread("./shrek.jpg");
 
-            pic = CvInvoke.Imread("C:\\Users\\pappg\\my stuff\\Code Repos\\Photonshop\\Photonshop WPF\\shrek.jpg");
+            bm = ConvertBitmapToBitmapImage(pic.ToBitmap());
+            RefreshImage();
 
             
         }
