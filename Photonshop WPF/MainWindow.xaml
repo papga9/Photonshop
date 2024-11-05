@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="button1" Content="Button" HorizontalAlignment="Left" Margin="33,33,0,0" VerticalAlignment="Top" Click="Button_click"/>
+        <Button x:Name="buttonGauss" Content="Gauss" HorizontalAlignment="Left" Margin="33,109,0,0" VerticalAlignment="Top" Click="Button_click"/>
+        <Button x:Name="buttonBrowse" Content="Browse" HorizontalAlignment="Left" Margin="32,50,0,0" VerticalAlignment="Top" Click="Button_browse"/>
         <Image x:Name="imageViewer"  HorizontalAlignment="Left" Height="304" Margin="338,60,0,0" VerticalAlignment="Top" Width="411"/>
 
     </Grid>
