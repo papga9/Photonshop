@@ -7,9 +7,25 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="buttonGauss" Content="Gauss" HorizontalAlignment="Left" Margin="33,109,0,0" VerticalAlignment="Top" Click="Button_click"/>
-        <Button x:Name="buttonBrowse" Content="Browse" HorizontalAlignment="Left" Margin="32,50,0,0" VerticalAlignment="Top" Click="Button_browse"/>
-        <Image x:Name="imageViewer"  HorizontalAlignment="Left" Height="304" Margin="338,60,0,0" VerticalAlignment="Top" Width="411"/>
-
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*" />
+            <ColumnDefinition Width="4*" />
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" x:Name="StackPanel1">
+            <Button x:Name="buttonBrowse" Content="Browse" Height="auto" Width="auto" Margin="0,0,0,20" Click="Button_browse"/>
+            <Button x:Name="buttonGauss" Content="Gauss" Click="Button_click"/>
+            <Button x:Name="buttonInvert" Content="Invert" Click="Button_invert"/>
+            <Button x:Name="buttonLog" Content="Log" Click="Button_log"/>
+            <Button x:Name="buttonGray" Content="Grayscale" Click="Button_gray"/>
+            <Button x:Name="buttonHistogram" Content="Histogram" Click="Button_histogram"/>
+            <Button x:Name="buttonHE" Content="Histogram Equlization" Click="Button_HE"/>
+            <Button x:Name="buttonAvg" Content="Box Filter" Click="Button_box"/>
+            <Button x:Name="buttonSobel" Content="Sobel Edge Detection" Click="Button_sobel"/>
+            <Button x:Name="buttonLaplace" Content="Laplace" Click="Button_laplace"/>
+            <Button x:Name="buttonCP" Content="Characteristic Points" Click="Button_CH"/>
+        </StackPanel>
+        <StackPanel Grid.Column="1" x:Name="StackPanel2" >
+            <Image x:Name="imageViewer" Height="auto" Margin="0,0,0,0" VerticalAlignment="Top" Width="auto"/>
+        </StackPanel>
     </Grid>
 </Window>
